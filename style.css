@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600&display=swap");
+:root{
+    --pry-col:orangered;
+    --sec-col:#ffa000;
+}
 *{
     margin: 0;
     padding: 0;
@@ -13,6 +17,8 @@ body{
     background-image:
     linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.8)),
     url('img/hero.png');
+    background-size:cover ;
+    background-repeat: no-repeat;
 }
 .hero{
     display: flex;
@@ -30,14 +36,14 @@ header{
     font-weight: bold;
 }
 .logo{
-    color: orangered;
+    color: var(--pry-col);
     cursor: pointer;
 }
 ul{
     display: none;
 }
 .nav-btn{
-    background: orangered;
+    background: var(--pry-col);
     padding: .75rem 1.15rem;
     color: #fff;
     font-size: .75rem;
@@ -59,7 +65,75 @@ nav{
     text-align: end;
 }
 .africa{
-    color: orangered;
+    color: var(--pry-col);
+}
+main{
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+.sec-wrap{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1.25rem;
+    justify-content: center;
+    max-width: 90%;
+}
+.bg-col{
+    background: var(--sec-col);
+    color: #fff;
+}
+.txt-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    text-align: center;
+}
+.txt-btn > p {
+    line-height: 1.5rem;
+    max-width: 70%;
+    font-size: .9rem;
+}
+.sec-btn{
+    border: none;
+    background: var(--pry-col);
+    padding: .75rem 1.15rem;
+    color: #fff;
+    font-size: .75rem;
+    border-radius: 1.25rem;
+    max-width: fit-content;
+    cursor: pointer;
+    font-weight: bold;
+}
+.sec-img{
+    border-radius: .5rem;
+}
+article{
+    padding: 2rem 0;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+article > div{
+    text-align: center;
+}
+article > div > p {
+    margin-top: .5rem;
+    line-height: 1.5rem;
+    font-size: .9rem;
 }
 @media (min-width:880px) {
     header{
@@ -81,5 +155,35 @@ nav{
         font-size: 3rem;
         max-width: 55%;
         margin: 0 auto;
+    }
+    .sec-wrap{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+    .txt-btn > p{
+        max-width: 60%;
+        font-size: 1.15rem;
+    }
+    .sec-img{
+        max-width: 55%;
+    }
+    .row-verse{
+        flex-direction: row-reverse;
+    }
+    article{
+        padding: 3rem 0;
+        flex-direction: row;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+    article > div {
+        max-width: 40%;
+        margin: 0 auto;
+    }
+    article > div > p{
+        font-size: 1.15rem; 
     }
 }
