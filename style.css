@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600&display=swap");
 :root{
-    --pry-col:orangered;
-    --sec-col:#ffa000;
+    --pry-col:rgb(255, 99, 43);
+    --sec-col:rgb(18, 52, 92);
+    --sec-p-col:rgb(13, 41, 73);
+    --box-shdw:-2px 4px 12px 1px rgba(150, 150, 150, 0.212);
 }
 *{
     margin: 0;
@@ -15,7 +17,7 @@ body{
 }
 .hero-wrap{
     background-image:
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.8)),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.801), rgba(255, 255, 255, 0.8)),
     url('img/hero.png');
     background-size:cover ;
     background-repeat: no-repeat;
@@ -27,20 +29,26 @@ body{
     margin: 0 auto;
     height: 100vh;
     width: 90%;
-    color: #222;
+    color: var(--sec-col);
 }
 header{
     height: 10vh;
     display: grid;
     place-items: center;
-    font-weight: bold;
+    color: var(--sec-col);
 }
 .logo{
     color: var(--pry-col);
     cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 ul{
     display: none;
+}
+li{
+    color: var(--sec-col);
+    font-weight: bold;
 }
 .nav-btn{
     background: var(--pry-col);
@@ -58,6 +66,7 @@ nav{
 .hero > h1, .hero > p {
     text-align: center;
     margin-bottom: 3rem;
+    color: var(--sec-p-col-col);
 }
 .hero > p{
     font-weight: bold;
@@ -81,6 +90,7 @@ section{
     justify-content: center;
     align-items: center;
     padding: 2rem 0;
+    color: var(--sec-col);
 }
 .sec-wrap{
     display: flex;
@@ -103,19 +113,24 @@ section{
 }
 .txt-btn > p {
     line-height: 1.5rem;
-    max-width: 70%;
+    max-width: 76%;
     font-size: .9rem;
 }
 .sec-btn{
-    border: none;
     background: var(--pry-col);
     padding: .75rem 1.15rem;
     color: #fff;
-    font-size: .75rem;
+    font-size: .8rem;
     border-radius: 1.25rem;
     max-width: fit-content;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 600;
+}
+.nav-btn:hover, .sec-btn:hover{
+    box-shadow: var(--box-shdw);
+    color: orangered;
+    background: #fff;
+    font-size: bold;   
 }
 .sec-img{
     border-radius: .5rem;
@@ -129,11 +144,13 @@ article{
 }
 article > div{
     text-align: center;
+    color: var(--sec-col);
 }
 article > div > p {
     margin-top: .5rem;
     line-height: 1.5rem;
     font-size: .9rem;
+    color: var(--sec-p-col);
 }
 @media (min-width:880px) {
     header{
