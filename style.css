@@ -179,10 +179,12 @@ section {
   background: #fff;
   font-size: bold;
 }
-.sec-btn, button{
+.sec-btn,
+button {
   transition: all 0.3s ease;
 }
-button:active, .sec-btn:active {
+button:active,
+.sec-btn:active {
   transform: translateY(0.5rem);
 }
 .sec-img {
