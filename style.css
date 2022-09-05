@@ -235,6 +235,7 @@ hr {
   gap: 3rem;
   padding: 2rem;
   background: #fff;
+  box-shadow: var(--box-shdw);
 }
 .stats h1 {
   color: var(--pry-col);
