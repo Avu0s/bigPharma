@@ -26,6 +26,7 @@ body {
     url("img/kimon.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .hero {
   display: flex;
